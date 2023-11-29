@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4crqtyqc3sd8"]
+
+[ext_resource type="Script" path="res://TestCar.cs" id="1_f2lu3"]
+[ext_resource type="Texture2D" uid="uid://b0efoa64gcdal" path="res://art/cars/1.png" id="2_uqgkc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_875j6"]
+radius = 63.0
+height = 228.0
+
+[node name="TestNode" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(2, -1)
+script = ExtResource("1_f2lu3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-1, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_875j6")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_uqgkc")

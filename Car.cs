@@ -24,11 +24,9 @@ public partial class Car : Area2D
 		}
 		if (Input.IsActionPressed("Accelerate"))
 		{
-			var velocity = new Vector2(0, -Speed);
-
-			Position = new Vector2(Position.X, Position.Y - Speed);
-			// Position = new Vector2(Position.x, Position.y - Speed);
-			// Position = new Vector2(Position.x, Position
+			// var velocity = new Vector2(0, -Speed);
+			// Position += velocity * (float)GetProcessDeltaTime();
+			
 		}
 	}	
 	public override void _Ready()
